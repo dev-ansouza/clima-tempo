@@ -128,7 +128,7 @@ export default function Home(){
             
       setloading(false);
 
-      console.log(response.data.results);
+      console.log(response.data.results.wind_speedy);
       
     })();
 
