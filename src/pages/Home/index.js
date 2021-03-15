@@ -155,7 +155,7 @@ export default function Home(){
           horizontal={true}
           contentContainerStyle={{ paddingBottom: '5%' }}
           styles={styles.list}
-          data={myList}
+          data={weather.forecast}
           keyExtractor={ item => item.date}
           renderItem={ ({ item }) => <Forecast data={item} /> }
           />

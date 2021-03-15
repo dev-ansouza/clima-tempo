@@ -3,37 +3,31 @@ export function condition(condition){
         case 'cloudly_night':
             return icon = {
                 name: 'cloud',
-                color: '#848484'
+                color: '#e1e1e1'
             };
             break;
         case 'cloudly_day':
             return icon = {
                 name: 'cloud',
-                color: '#848484'
+                color: '#e1e1e1'
             };
             break;
         case 'clear_night':
             return icon = {
                 name: 'md-cloud-night-outline',
-                color: '#848484'
-            };
-            break;
-        case 'clear_day':
-            return icon = {
-                name: 'partly-sunny-outline',
-                color: '#848484'
-            };
-            break;
-        case 'storm':
-            return icon = {
-                name: 'rainy-outline',
-                color: '#1ec9ff'
+                color: '#e1e1e1'
             };
             break;
         case 'clear_day':
             return icon = {
                 name: 'partly-sunny-outline',
                 color: '#FFB300'
+            };
+            break;
+        case 'storm':
+            return icon = {
+                name: 'rainy-outline',
+                color: '#a1a8ab'
             };
             break;
         case 'rain':
