@@ -11,17 +11,19 @@ export default function Header({ background, weather, icon }){
             colors={background}
         >
             <Text style={styles.date}>{weather.date}</Text>
-            <Text style={styles.city}>{weather.city}</Text>
 
             <Ionicons
                 name={icon.name}
                 color={icon.color}
                 size={150}
+                styles={styles.icon}
             />
 
             <Text style={styles.description}>{weather.description}</Text>
 
             <Text style={styles.climate}>{weather.temp}º</Text>
+
+            <Text style={styles.city}>{weather.city}</Text>
 
         </LinearGradient>
     )
@@ -36,6 +38,20 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         borderRadius: 8 
     },
+    icon:{
+        marginTop: -20
+    },
+    description:{
+        color: '#FFF',
+        fontSize: 15,
+        fontWeight: 'bold',
+        marginTop: -20
+    },
+    climate:{
+        color: '#FFF',
+        fontSize: 70,
+        fontWeight: 'bold'
+    },
     date:{
         color: '#FFF',
         fontSize: 17
@@ -43,16 +59,6 @@ const styles = StyleSheet.create({
     city:{
         color: '#FFF',
         fontSize: 20,
-        fontWeight: 'bold'
-    },
-    description:{
-        color: '#FFF',
-        fontSize: 15,
-        fontWeight: 'bold'
-    },
-    climate:{
-        color: '#FFF',
-        fontSize: 80,
         fontWeight: 'bold'
     }
 })
