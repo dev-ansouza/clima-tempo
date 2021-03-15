@@ -1,25 +1,25 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { BackHandler, StyleSheet, Text } from 'react-native';
 
 import { Ionicons } from '@expo/vector-icons'
 
-export default function Header(){
-    return(
+export default function Header({ background, weather, icon }){
+    return(        
         <LinearGradient 
             style={styles.header}
-            colors={['#1ed6ff', '#97c1ff']}
+            colors={background}
         >
-            <Text style={styles.date}>12/03/2021</Text>
-            <Text style={styles.city}>Belo Horizonte</Text>
+            <Text style={styles.date}>{weather.date}</Text>
+            <Text style={styles.city}>{weather.city}</Text>
 
             <Ionicons
-                name="cloud"
-                color="#FFF"
+                name={icon.name}
+                color={icon.color}
                 size={150}
             />
 
-            <Text style={styles.climate}>29º</Text>
+            <Text style={styles.climate}>{weather.temp}º</Text>
 
         </LinearGradient>
     )
@@ -27,6 +27,7 @@ export default function Header(){
 
 const styles = StyleSheet.create({
     header:{
+        marginTop: 15,
         width: '95%',
         height:'55%',
         alignItems: 'center',
