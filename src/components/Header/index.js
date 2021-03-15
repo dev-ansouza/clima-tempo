@@ -19,6 +19,8 @@ export default function Header({ background, weather, icon }){
                 size={150}
             />
 
+            <Text style={styles.description}>{weather.description}</Text>
+
             <Text style={styles.climate}>{weather.temp}º</Text>
 
         </LinearGradient>
@@ -41,6 +43,11 @@ const styles = StyleSheet.create({
     city:{
         color: '#FFF',
         fontSize: 20,
+        fontWeight: 'bold'
+    },
+    description:{
+        color: '#FFF',
+        fontSize: 15,
         fontWeight: 'bold'
     },
     climate:{
